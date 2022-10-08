@@ -42,7 +42,7 @@ function SignUpForm() {
 
   return(
     <>{isFormSubmitted===false?
-      <form className="w-full h-full border border-red-50" onSubmit={handleSubmit(onSubmit)}>
+      <form className="min-w-full min-h-full text-2xl grid grid-rows-2 gap-4 p-8 border border-red-50" onSubmit={handleSubmit(onSubmit)}>
         <input
           id="name"
           name="name"
@@ -50,7 +50,7 @@ function SignUpForm() {
           {...register("name")}
           placeholder="Enter Your Name"
           required
-          className={`rounded  form-control ${errors.name ? "is-invalid" : ""} w-max `}
+          className={`min-w-full min-h-full rounded-l-full rounded-r-full content-center text-center  form-control ${errors.name ? "is-invalid" : ""} w-max `}
         />
         <div className="invalid-feedback">{errors.name?.message}</div>
 
@@ -60,10 +60,10 @@ function SignUpForm() {
           type="email"
           placeholder="Enter Your Email"
           {...register("email")}
-          className={`form-control ${errors.email ? "is-invalid" : ""} w-max`}
+          className={`min-w-full min-h-full rounded-l-full rounded-r-full content-center text-center  form-control ${errors.email ? "is-invalid" : ""} w-max`}
         />
         <div className="invalid-feedback">{errors.email?.message}</div>
-        <button type="submit"> Submit </button>
+        <button className="min-w-full min-h-full rounded-l-full rounded-r-full content-center text-center bg-purple-700" type="submit"> Submit </button>
       </form>
       
   :<p>{submissionResult}</p>}

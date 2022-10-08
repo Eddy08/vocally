@@ -20,6 +20,7 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    font-size: 1vmax;
   }
   body {
     color: white;
