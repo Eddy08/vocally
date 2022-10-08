@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import DownloadButton from "../components/DownloadButton";
 import Email from "../components/Email";
 import SignUpForm from "../components/SignUpForm";
 import SocialMedia from "../components/SocialMedia";
 import Telephone from "../components/Telephone";
 import styles from "../styles/Home.module.css";
-
+import bg from "../public/dotted-globe.png";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -24,85 +25,109 @@ export default function Home() {
               height={70}
             />
           </section>
-          <section className="grid grid-cols-2 gap-4 col-span-2 text-right">
+          <section className="grid grid-cols-2 gap-4 p-10 text-right">
             <Telephone />
             <Email />
+          </section>
+          <section className="p-8">
+            <DownloadButton />
           </section>
         </article>
       </nav>
       <main className={styles.main}>
-        <article className={styles.partitionPage}>
-          <h1 className={styles.title}>
-            Vehicle Maintenance From the Comfort of Your Home
-          </h1>
+        <article
+          style={{
+            backgroundImage: `url(${bg.src})`,
+            width: "100%",
+            height: "100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+          className={styles.partitionPage}
+        >
+          <article className="grid lg:grid-cols-2">
+            <article className={styles.highlightedMain}>
+              <h1 className={styles.title}>
+                Vehicle Maintenance From the Comfort of Your Home
+              </h1>
 
-          <p className={styles.description}>
-            Open Auto Soothes the hassle of maintaining your vehicle and helps
-            you deal with unexpected repairs worry-free.
-          </p>
-          <article className={styles.highlightedMain}>
-            <SignUpForm />
+              <p className={styles.description}>
+                Open Auto Soothes the hassle of maintaining your vehicle and
+                helps you deal with unexpected repairs worry-free.
+              </p>
+              <section className="max-w-full">
+                <SignUpForm />
+              </section>
+            </article>
+            <article className={styles.highlightedMain}>
+              <section>
+                <Image
+                  src="/Pickup_Illustration.png"
+                  alt="Illustration"
+                  width={1000}
+                  height={1000}
+                />
+              </section>
+            </article>
           </article>
-          <article className={styles.highlightedMain}>
-            <section>
-              <Image
-                src="/Pickup_Illustration.png"
-                alt="Illustration"
-                width={1000}
-                height={1000}
-              />
-            </section>
-          </article>
-          <article className={styles.highlightedMain}>
-            <section className={styles.logo}>
+          <article
+            className={`${styles.highlightedMain} min-w-full grid sm:grid-cols-1 sm:grid-rows-2 lg:grid-cols-3 gap-4 lg:text-right lg:place-content-end`}
+          >
+            <section
+              className={`${styles.logo} sm:place-content-center sm:text-center lg:col-span-1`}
+            >
               <Image
                 src="/openauto.svg"
                 alt="Open Auto Logo"
-                width={256}
-                height={256}
+                width={64}
+                height={64}
               />
             </section>
-            <section>
-              <Telephone />
-            </section>
-            <section>
-              <Email />
-            </section>
-            <section>
+
+            <section className="col-span-2 sm:text-center sm:place-content-center sm:p-10 lg:text-right lg:right-full lg:place-content-end">
               <SocialMedia />
             </section>
           </article>
         </article>
 
-        <article className={styles.partitionPage}>
-          <section>
-            <h1 className={styles.title}>Focused on Time Saving</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              dignissim mi nisl, ac luctus ipsum pellentesque in. Praesent
-              pharetra, magna et cursus varius, elit est auctor elit, ac
-              hendrerit urna diam sit amet quam. Suspendisse quis arcu ac odio
-              hendrerit rutrum vitae vitae enim. Phasellus tortor neque,
-              venenatis eu hendrerit vitae, scelerisque eu tortor. Donec
-              faucibus leo at quam iaculis, pulvinar fermentum libero semper.
-              Suspendisse sodales lorem quis mi faucibus, ut vulputate leo
-              bibendum. Maecenas ut dignissim lorem, at ultricies arcu. Duis
-              vitae libero semper, commodo tortor at, ullamcorper neque. Integer
-              eu tempus nulla.
-            </p>
-          </section>
-          <section>
+        <article
+          className={` h-screen grid lg:grid-cols-2 gap-4 sm:grid-rows-12 lg:gap-8 sm:gap-8 place-content-center`}
+        >
+          <article className={`grid lg:grid-rows-2 sm:grid-rows-9 min-h-fit`}>
+            <article className={styles.highlightedMain}>
+              <h1 className={styles.title}>Focused on Time Saving</h1>
+              <p className={styles.description}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                dignissim mi nisl, ac luctus ipsum pellentesque in. Praesent
+                pharetra, magna et cursus varius, elit est auctor elit, ac
+                hendrerit urna diam sit amet quam. Suspendisse quis arcu ac odio
+                hendrerit rutrum vitae vitae enim. Phasellus tortor neque,
+                venenatis eu hendrerit vitae, scelerisque eu tortor. Donec
+                faucibus leo at quam iaculis, pulvinar fermentum libero semper.
+                Suspendisse sodales lorem quis mi faucibus, ut vulputate leo
+                bibendum. Maecenas ut dignissim lorem, at ultricies arcu. Duis
+                vitae libero semper, commodo tortor at, ullamcorper neque.
+                Integer eu tempus nulla.
+              </p>
+              <section className=" max-w-full lg:h-1/2 sm:h-1/5 sm:p-8 lg:w-9/12 sm:w-1/2 p-10 grid mx-auto">
+                <DownloadButton />
+              </section>
+            </article>
+          </article>
+          <article
+            className={`${styles.highlightedMain} relative lg:order-first max-h-full min-h-fit sm:grid-rows-3 max-h-screen-lg`}
+          >
             <Image
               src="/Phone.svg"
               alt="Pick Up Service Phone Banner"
               width={1000}
               height={1000}
             />
-          </section>
+          </article>
         </article>
       </main>
 
-      <footer className={styles.footer}>
+      <footer className={`${styles.footer} grid lg:grid-cols-3 gap-4 `}>
         <article>
           <section className={styles.logo}>
             <Image
@@ -115,13 +140,12 @@ export default function Home() {
 
           <p> Open Auto @ all rights reserved </p>
         </article>
-        <article className={styles.grid}>
-          <section>
+        <article className="lg:col-span-2">
+          <section className="grid grid-cols-2 text-right">
             <Telephone />
+            <Email />
           </section>
-          <section>
-            <Email />{" "}
-          </section>
+
           <section>
             <SocialMedia />
           </section>
