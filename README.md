@@ -8,7 +8,6 @@ Try to Create A demo Website according to wire frame shared.
 
 
 
-Uploading Open Auto 🚖 - Google Chrome 2022-10-08 10-04-39.mp4…
 
 
 
