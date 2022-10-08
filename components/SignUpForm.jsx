@@ -50,7 +50,7 @@ function SignUpForm() {
           {...register("name")}
           placeholder="Enter Your Name"
           required
-          className={`lg:min-w-full lg:min-h-full lg:w-full lg:h-full sm:w-1/2 sm:h-full sm:place-content-center sm:mx-auto rounded-l-full rounded-r-full content-center text-center  form-control ${errors.name ? "is-invalid" : ""} w-max `}
+          className={`lg:min-w-full lg:min-h-full lg:w-full lg:h-full sm:w-1/2 sm:h-full sm:place-content-center sm:mx-auto md:w-1/3 md:h-1/3 md:mx-auto rounded-l-full w-1/4 mx-auto rounded-r-full content-center text-center  form-control ${errors.name ? "is-invalid" : ""} w-max `}
         />
         <div className="invalid-feedback">{errors.name?.message}</div>
 
@@ -60,10 +60,10 @@ function SignUpForm() {
           type="email"
           placeholder="Enter Your Email"
           {...register("email")}
-          className={`lg:min-w-full lg:min-h-full lg:w-full lg:h-full sm:w-1/2 sm:h-full sm:place-content-center sm:mx-auto rounded-l-full rounded-r-full content-center text-center  form-control ${errors.email ? "is-invalid" : ""} w-max`}
+          className={`lg:min-w-full lg:min-h-full lg:w-full lg:h-full sm:w-1/2 sm:h-full sm:place-content-center sm:mx-auto md:w-1/3 md:h-1/3 md:mx-auto rounded-l-full w-1/4 mx-auto rounded-r-full content-center text-center  form-control ${errors.email ? "is-invalid" : ""} w-max`}
         />
         <div className="invalid-feedback">{errors.email?.message}</div>
-        <button className="lg:min-w-full lg:min-h-full lg:w-full lg:h-full sm:w-1/2 sm:h-full sm:place-content-center sm:mx-auto rounded-l-full rounded-r-full content-center text-center bg-purple-700" type="submit"> Submit </button>
+        <button className="lg:min-w-full lg:min-h-full lg:w-full lg:h-full sm:w-1/2 sm:h-full sm:place-content-center sm:mx-auto md:w-1/3 md:h-1/3 md:mx-auto w-1/4 mx-auto rounded-l-full rounded-r-full content-center text-center bg-purple-700" type="submit"> Submit </button>
       </form>
       
   :<p>{submissionResult}</p>}

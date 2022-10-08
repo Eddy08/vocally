@@ -74,7 +74,7 @@ export default function Home() {
             className={`${styles.highlightedMain} min-w-full grid sm:grid-cols-1 sm:grid-rows-2 lg:grid-cols-3 gap-4 lg:text-right lg:place-content-end`}
           >
             <section
-              className={`${styles.logo} sm:place-content-center sm:text-center lg:col-span-1`}
+              className={`${styles.logo} sm:place-content-center sm:text-center place-content-center text-center lg:col-span-1 col-span-2`}
             >
               <Image
                 src="/openauto.svg"
