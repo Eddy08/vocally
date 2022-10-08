@@ -6,12 +6,22 @@ Try to Create A demo Website according to wire frame shared.
 
 ![Open_Auto_🚖_-_Google_Chrome_2022-10-08_10-04-39_AdobeExpress](https://user-images.githubusercontent.com/40041498/194722758-c2cc06b9-1982-4958-8d88-ad691d6bcf6f.gif)
 
-### Comparison of  Wireframe Design VS Submitted Final Design
+### Comparison of  Wireframe Design VS Submitted Final Design:
+
+a. For Large Devices 
+Wireframe Design 
+![image](https://user-images.githubusercontent.com/40041498/194728819-7ba4a481-f157-4de3-989b-4c6ecb550ed4.png)
 
 Final Design
 ![image](https://user-images.githubusercontent.com/40041498/194728679-f8a8984c-ee62-4214-986a-283edc7135fc.png)
 
+b. For Small Devices
 
+Wireframe Design:
+![image](https://user-images.githubusercontent.com/40041498/194728896-052b2932-7864-4f99-bc8a-a4adc0796ddd.png)
+
+Final Design:
+![image](https://user-images.githubusercontent.com/40041498/194729219-b3654101-74ef-4f33-8e3d-6dfaeb662e40.png)
 
 
 
