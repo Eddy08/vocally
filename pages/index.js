@@ -127,7 +127,9 @@ export default function Home() {
         </article>
       </main>
 
-      <footer className={`${styles.footer} grid lg:grid-cols-3 gap-4 `}>
+      <footer
+        className={`${styles.footer} grid lg:grid-cols-3 sm:grid-cols-2 gap-4 `}
+      >
         <article>
           <section className={styles.logo}>
             <Image
