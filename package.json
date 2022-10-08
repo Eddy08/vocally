@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.8",
+    "circular-json": "^0.5.9",
     "mongodb": "^4.10.0",
     "next": "12.3.1",
     "react": "18.2.0",

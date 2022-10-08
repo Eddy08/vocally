@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-const SignUpForm = () => {
+function SignUpForm() {
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
-    email: Yup.string().required("Email is required").email("Email is invalid"),
+    email: Yup.string().lowercase().required("Email is required").email("Email is invalid"),
   });
   const formOptions = { resolver: yupResolver(validationSchema) };
+
+  const [isFormSubmitted,setIsFormSubmitted]=useState(false)
+  const [submissionResult,setSubmissionResult]=useState('')
 
   const { register, handleSubmit, reset, formState } = useForm(formOptions);
   const { errors } = formState;
@@ -26,15 +29,20 @@ const SignUpForm = () => {
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
     const result = await response.json()
-    alert(`Is this your full name: ${result.data}`)
+    // alert(`Is this your full name: ${result.data}`)
     // display form data on success
-    alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
-    return false;
+    // alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
+    setIsFormSubmitted(true);
+    setSubmissionResult(result);
+   
+    // setSubmissionResult(result)
+    // console.log('result => ',result)
+    
   }
 
-  return (
-    <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+  return(
+    <>{isFormSubmitted===false?
+      <form className="w-full h-full border border-red-50" onSubmit={handleSubmit(onSubmit)}>
         <input
           id="name"
           name="name"
@@ -42,7 +50,7 @@ const SignUpForm = () => {
           {...register("name")}
           placeholder="Enter Your Name"
           required
-          className={`form-control ${errors.name ? "is-invalid" : ""} w-max `}
+          className={`rounded  form-control ${errors.name ? "is-invalid" : ""} w-max `}
         />
         <div className="invalid-feedback">{errors.name?.message}</div>
 
@@ -57,7 +65,34 @@ const SignUpForm = () => {
         <div className="invalid-feedback">{errors.email?.message}</div>
         <button type="submit"> Submit </button>
       </form>
-    </>
-  );
+      
+  :<p>{submissionResult}</p>}
+  </>)
+  // return (<>
+  //     <form onSubmit={handleSubmit(onSubmit)}>
+  //       <input
+  //         id="name"
+  //         name="name"
+  //         type="text"
+  //         {...register("name")}
+  //         placeholder="Enter Your Name"
+  //         required
+  //         className={`form-control ${errors.name ? "is-invalid" : ""} w-max `}
+  //       />
+  //       <div className="invalid-feedback">{errors.name?.message}</div>
+
+  //       <input
+  //         id="email"
+  //         name="email"
+  //         type="email"
+  //         placeholder="Enter Your Email"
+  //         {...register("email")}
+  //         className={`form-control ${errors.email ? "is-invalid" : ""} w-max`}
+  //       />
+  //       <div className="invalid-feedback">{errors.email?.message}</div>
+  //       <button type="submit"> Submit </button>
+  //     </form>
+  //     <p className="text-green-500">{submissionResult}</p>
+  //     </>)
 };
 export default SignUpForm;

@@ -16,48 +16,50 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Vehicle Maintenance From the Comfort of Your Home
-        </h1>
+        <article className={styles.partitionPage}>
+          <h1 className={styles.title}>
+            Vehicle Maintenance From the Comfort of Your Home
+          </h1>
 
-        <p className={styles.description}>
-          Open Auto Soothes the hassle of maintaining your vehicle and helps you
-          deal with unexpected repairs worry-free.
-        </p>
-        <article>
-          <SignUpForm />
-        </article>
-        <article>
-          <section>
-            <Image
-              src="/Pickup_Illustration.png"
-              alt="Illustration"
-              width={1000}
-              height={1000}
-            />
-          </section>
-        </article>
-        <article className={styles.grid}>
-          <section className={styles.logo}>
-            <Image
-              src="/openauto.svg"
-              alt="Open Auto Logo"
-              width={16}
-              height={16}
-            />
-          </section>
-          <section>
-            <Telephone />
-          </section>
-          <section>
-            <Email />
-          </section>
-          <section>
-            <SocialMedia />
-          </section>
+          <p className={styles.description}>
+            Open Auto Soothes the hassle of maintaining your vehicle and helps
+            you deal with unexpected repairs worry-free.
+          </p>
+          <article className={styles.highlightedMain}>
+            <SignUpForm />
+          </article>
+          <article className={styles.highlightedMain}>
+            <section>
+              <Image
+                src="/Pickup_Illustration.png"
+                alt="Illustration"
+                width={1000}
+                height={1000}
+              />
+            </section>
+          </article>
+          <article className={styles.highlightedMain}>
+            <section className={styles.logo}>
+              <Image
+                src="/openauto.svg"
+                alt="Open Auto Logo"
+                width={256}
+                height={256}
+              />
+            </section>
+            <section>
+              <Telephone />
+            </section>
+            <section>
+              <Email />
+            </section>
+            <section>
+              <SocialMedia />
+            </section>
+          </article>
         </article>
 
-        <article className={styles.grid}>
+        <article className={styles.partitionPage}>
           <section>
             <h1 className={styles.title}>Focused on Time Saving</h1>
             <p>
@@ -86,17 +88,18 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          <span className={styles.logo}>
+        <article>
+          <section className={styles.logo}>
             <Image
               src="/openauto-brand.svg"
               alt="Open Auto Branding"
-              width={67}
-              height={18}
+              width={262}
+              height={70}
             />
-          </span>
-          Open Auto @ all rights reserved{" "}
-        </a>
+          </section>
+
+          <p> Open Auto @ all rights reserved </p>
+        </article>
         <article className={styles.grid}>
           <section>
             <Telephone />

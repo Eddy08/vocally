@@ -429,6 +429,11 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
+"circular-json@^0.5.9":
+  "integrity" "sha512-4ivwqHpIFJZBuhN3g/pEcdbnGUywkBblloGbkglyloVjjR3uT6tieI89MVOfbP2tHX5sgb01FuLgAOzebNlJNQ=="
+  "resolved" "https://registry.npmjs.org/circular-json/-/circular-json-0.5.9.tgz"
+  "version" "0.5.9"
+
 "color-convert@^2.0.1":
   "integrity" "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ=="
   "resolved" "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz"
