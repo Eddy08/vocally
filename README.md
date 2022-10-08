@@ -1,3 +1,19 @@
+### Explaination: 
+
+Try to Create A demo Website according to wire frame shared.
+
+### Video 
+
+![Open_Auto_🚖_-_Google_Chrome_2022-10-08_10-04-39_AdobeExpress](https://user-images.githubusercontent.com/40041498/194722758-c2cc06b9-1982-4958-8d88-ad691d6bcf6f.gif)
+
+
+
+Uploading Open Auto 🚖 - Google Chrome 2022-10-08 10-04-39.mp4…
+
+
+
+### Default Docs: 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
