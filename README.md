@@ -3,7 +3,9 @@
 Try to Create A demo Website according to wire frame shared.
 
 ### Video 
-
+Video:
+https://drive.google.com/file/d/11uT0F3FPg1aPKfj9Sat8KbnlTpjiOdB9/view?usp=sharing
+GIF:
 ![Open_Auto_🚖_-_Google_Chrome_2022-10-08_10-04-39_AdobeExpress](https://user-images.githubusercontent.com/40041498/194722758-c2cc06b9-1982-4958-8d88-ad691d6bcf6f.gif)
 
 ### Comparison of  Wireframe Design VS Submitted Final Design:
